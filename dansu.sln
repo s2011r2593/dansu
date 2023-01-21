@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dansu-main", "dansu-main\dansu-main.vcxproj", "{65FA71D1-2674-4012-A6E0-B865E65B69B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C5B5F634-168B-4562-9D90-D4D37D564655}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65FA71D1-2674-4012-A6E0-B865E65B69B7}.Debug|x64.ActiveCfg = Debug|x64
+		{65FA71D1-2674-4012-A6E0-B865E65B69B7}.Debug|x64.Build.0 = Debug|x64
+		{65FA71D1-2674-4012-A6E0-B865E65B69B7}.Debug|x86.ActiveCfg = Debug|Win32
+		{65FA71D1-2674-4012-A6E0-B865E65B69B7}.Debug|x86.Build.0 = Debug|Win32
+		{65FA71D1-2674-4012-A6E0-B865E65B69B7}.Release|x64.ActiveCfg = Release|x64
+		{65FA71D1-2674-4012-A6E0-B865E65B69B7}.Release|x64.Build.0 = Release|x64
+		{65FA71D1-2674-4012-A6E0-B865E65B69B7}.Release|x86.ActiveCfg = Release|Win32
+		{65FA71D1-2674-4012-A6E0-B865E65B69B7}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4B31EB6-5BF3-4824-9D27-0FD53881F4B0}
+	EndGlobalSection
+EndGlobal
