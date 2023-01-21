@@ -17,6 +17,14 @@
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="test|Win32">
+      <Configuration>test</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="test|x64">
+      <Configuration>test</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -52,6 +60,13 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='test|Win32'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='test|x64'">
+    <PlatformToolset>v143</PlatformToolset>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -83,6 +98,10 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\seanr\Documents\Visual Studio 2022\cpp-libs\SDL2-2.26.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\seanr\Documents\Visual Studio 2022\cpp-libs\SDL2-2.26.1\lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='test|x64'">
     <IncludePath>C:\Users\seanr\Documents\Visual Studio 2022\cpp-libs\SDL2-2.26.1\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\seanr\Documents\Visual Studio 2022\cpp-libs\SDL2-2.26.1\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
@@ -144,21 +163,26 @@
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='test|x64'">
+    <Lib>
+      <OutputFile>C:\Users\seanr\source\repos\dansu\dansu-main\x64\test\$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
   <ItemGroup>
     <None Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dansu-loader.c" />
     <ClCompile Include="dansu-user.c" />
-    <ClCompile Include="helpers.c" />
+    <ClCompile Include="dansu-helpers.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dansu-loader.h" />
     <ClInclude Include="dansu-user.h" />
     <ClInclude Include="dansu.h" />
-    <ClInclude Include="helpers.h" />
-    <ClInclude Include="types.h" />
+    <ClInclude Include="dansu-helpers.h" />
+    <ClInclude Include="dansu-types.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

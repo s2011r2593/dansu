@@ -6,9 +6,9 @@
 #include <stdio.h>
 
 #include "dansu.h"
-#include "types.h"
+#include "dansu-types.h"
 
-int main() {
+int main(int argc, char* argv[]) {
 	DansuOS* dansu = InitializeDansu();
 
 	ExitDansu(dansu);
