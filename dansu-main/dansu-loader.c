@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 #include "dansu-loader.h"
-#include "helpers.h"
+#include "dansu-helpers.h"
 
 const int GRID_WIDTH = 160;
 const int GRID_HEIGHT = 120;

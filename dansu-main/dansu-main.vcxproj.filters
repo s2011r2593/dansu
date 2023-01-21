@@ -21,7 +21,7 @@
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="helpers.c">
+    <ClCompile Include="dansu-helpers.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="dansu-loader.c">
@@ -32,10 +32,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="types.h">
+    <ClInclude Include="dansu-types.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="helpers.h">
+    <ClInclude Include="dansu-helpers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="dansu.h">
