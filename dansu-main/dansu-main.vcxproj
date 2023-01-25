@@ -172,17 +172,23 @@
     <None Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="dansu-display.c" />
     <ClCompile Include="dansu-loader.c" />
-    <ClCompile Include="dansu-user.c" />
     <ClCompile Include="dansu-helpers.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="dansu-defs.h" />
+    <ClInclude Include="dansu-display.h" />
     <ClInclude Include="dansu-loader.h" />
-    <ClInclude Include="dansu-user.h" />
     <ClInclude Include="dansu.h" />
     <ClInclude Include="dansu-helpers.h" />
     <ClInclude Include="dansu-types.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\dsf0.bmp" />
+    <Image Include="assets\dsf1.bmp" />
+    <Image Include="assets\hello_world.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

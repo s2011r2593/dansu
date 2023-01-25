@@ -27,7 +27,7 @@
     <ClCompile Include="dansu-loader.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dansu-user.c">
+    <ClCompile Include="dansu-display.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,8 +44,22 @@
     <ClInclude Include="dansu-loader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="dansu-user.h">
+    <ClInclude Include="dansu-display.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="dansu-defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\dsf0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\hello_world.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\dsf1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

@@ -4,5 +4,5 @@
 
 #include "dansu-types.h"
 
-DansuOS* InitializeDansu();
-void ExitDansu(DansuOS* dansu);
+DansuOS* DS_Initialize();
+void DS_Exit(DansuOS* dansu);
