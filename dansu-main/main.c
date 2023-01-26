@@ -20,12 +20,7 @@ int main(int argc, char* argv[]) {
 	SDL_RenderClear(dansu->renderer);
 	DS_RenderTexture(dansu, 1, (GRID_WIDTH / 2) - 16, (GRID_HEIGHT / 2) - 21, 32, 42);
 	SDL_RenderPresent(dansu->renderer);
-	//SDL_Delay(2000);
-
-	//SDL_RenderClear(dansu->renderer);
-	//DS_PrintChar(dansu, 'f', 70, 70);
-	//DS_PrintString(dansu, "loading...", 7, 13);
-	//SDL_RenderPresent(dansu->renderer);
+	SDL_Delay(2000);
 
 
 	uint8_t should_quit = 0;
@@ -39,6 +34,9 @@ int main(int argc, char* argv[]) {
 			dansu->state = dsAcceptingUserInput;
 			break;
 		case dsExecuting:
+			printf("uhhh....\n");
+			SDL_Delay(1000);
+			dansu->state = dsAcceptingUserInput;
 			break;
 		case dsAcceptingUserInput:
 			DS_CheckKeyInput(dansu, sdle);

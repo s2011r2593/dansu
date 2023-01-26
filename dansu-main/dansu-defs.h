@@ -5,6 +5,6 @@
 #define dsExecuting 1
 #define dsAcceptingUserInput 2
 
-extern const int GRID_WIDTH;
-extern const int GRID_HEIGHT;
-extern const int SCREEN_SCALE;
+#define GRID_WIDTH 320
+#define GRID_HEIGHT 240
+#define SCREEN_SCALE 3

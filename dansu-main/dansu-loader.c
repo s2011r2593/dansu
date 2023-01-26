@@ -3,14 +3,9 @@
 #include <stdio.h>
 
 #include "dansu-loader.h"
+#include "dansu-console.h"
 #include "dansu-helpers.h"
 #include "dansu-defs.h"
-
-const int GRID_WIDTH = 160;
-const int GRID_HEIGHT = 120;
-const int SCREEN_SCALE = 6;
-
-const uint64_t HASHED_PASS = 0xfa10ce17f79cf390;
 
 void InitializeSDL(DansuOS* dansu) {
 	if (SDL_Init(SDL_INIT_VIDEO) != 0) {
@@ -58,8 +53,6 @@ DansuOS* DS_Initialize() {
 	dansu->max_imgs = 16;
 	dansu->num_imgs = 0;
 	dansu->state = dsBooting;
-	dansu->cursor[0] = 0;
-	dansu->cursor[1] = 0;
 
 	dansu->surfaces = (SDL_Surface**) malloc(dansu->max_imgs * sizeof(SDL_Surface*));
 	CheckAlloc(dansu->surfaces, "Failed to allocate surfaces");
@@ -68,11 +61,15 @@ DansuOS* DS_Initialize() {
 
 	InitializeSDL(dansu);
 
+	dansu->console = Console_Initialize();
+
 	return dansu;
 }
 
 void DS_Exit(DansuOS* dansu) {
 	DeinitializeSDL(dansu);
+
+	Console_Destroy(dansu->console);
 
 	free(dansu->textures);
 	free(dansu->surfaces);

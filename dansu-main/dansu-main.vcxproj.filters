@@ -30,6 +30,9 @@
     <ClCompile Include="dansu-display.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="dansu-console.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dansu-types.h">
@@ -50,16 +53,8 @@
     <ClInclude Include="dansu-defs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="assets\dsf0.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\hello_world.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\dsf1.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
+    <ClInclude Include="dansu-console.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
