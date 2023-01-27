@@ -4,11 +4,24 @@
 
 #include "dansu-helpers.h"
 
-void CheckAlloc(void* ptr, const char* msg) {
+void* Mallocate(size_t size, const char* msg) {
+	void* ptr = (void*) malloc(size);
 	if (ptr == NULL) {
-		printf("%s\n", msg);
+		printf("%s", msg);
 		exit(-1);
 	}
+
+	return ptr;
+}
+
+void* Callocate(size_t count, size_t dat_size, const char* msg) {
+	void* ptr = (void*) calloc(count, dat_size);
+	if (ptr == NULL) {
+		printf("%s", msg);
+		exit(-1);
+	}
+
+	return ptr;
 }
 
 // Taken from http://www.cse.yorku.ca/~oz/hash.html
