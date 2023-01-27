@@ -24,10 +24,8 @@ const int padx = PAD_X;
 */
 
 Console* Console_Initialize() {
-	Console* console = (Console*) calloc(1, sizeof(Console));
-	CheckAlloc(console, "Failed to allocate console");
-	console->stream = (char*) malloc(CONSOLE_BUFFER_SIZE);
-	CheckAlloc(console->stream, "Failed to allocate console stream");
+	Console* console = (Console*) Callocate(1, sizeof(Console), "Failed to allocate console.\n");
+	console->stream = (char*) Mallocate(CONSOLE_BUFFER_SIZE, "Failed to allocate console stream.\n");
 
 	return console;
 }

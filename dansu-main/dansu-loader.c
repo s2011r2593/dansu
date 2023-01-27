@@ -48,16 +48,13 @@ void DeinitializeSDL(DansuOS* dansu) {
 }
 
 DansuOS* DS_Initialize() {
-	DansuOS* dansu = (DansuOS*) malloc(sizeof(DansuOS));
-	CheckAlloc(dansu, "Failed to allocate dansu");
+	DansuOS* dansu = (DansuOS*) Mallocate(sizeof(DansuOS), "Failed to allocate dansu.\n");
 	dansu->max_imgs = 16;
 	dansu->num_imgs = 0;
 	dansu->state = dsBooting;
 
-	dansu->surfaces = (SDL_Surface**) malloc(dansu->max_imgs * sizeof(SDL_Surface*));
-	CheckAlloc(dansu->surfaces, "Failed to allocate surfaces");
-	dansu->textures = (SDL_Texture**) malloc(dansu->max_imgs * sizeof(SDL_Texture*));
-	CheckAlloc(dansu->textures, "Failed to allocate textures");
+	dansu->surfaces = (SDL_Surface**) Mallocate(dansu->max_imgs * sizeof(SDL_Surface*), "Failed to allocate surface array.\n");
+	dansu->textures = (SDL_Texture**) Mallocate(dansu->max_imgs * sizeof(SDL_Texture*), "Failed to allocate texture array.\n");
 
 	InitializeSDL(dansu);
 
